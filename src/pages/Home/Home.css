@@ -1,0 +1,35 @@
+.home {
+  min-height: 100vh;
+  padding: 89px;
+}
+.home .hero{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: calc(100vh - 89px);
+  background-image: url('/images/home/desktop/image-hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ;
+}
+.home .hero-left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home .hero-left h3{
+  letter-spacing: 5px;
+  font-size: 13px;
+  color: var(--darkGrey);
+  margin-bottom: 16px;
+}
+.home .hero-left h1{
+ font-size: 56px; 
+ margin-bottom: 16px;
+}
+.home .hero-left p{
+  width: 70%;
+  line-height: 2;
+  margin-bottom: 16px;
+  color: var(--darkGrey);
+}
