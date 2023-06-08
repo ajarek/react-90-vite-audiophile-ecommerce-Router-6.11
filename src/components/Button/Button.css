@@ -1,8 +1,6 @@
 .button{
   width: 164px;
   height: 44px;
-  background-color: var(--ginger);
-  color: var(--white);
   border: none;
   font-size: 13px;
   font-weight: 700;
@@ -10,5 +8,5 @@
   cursor: pointer;
 }
 .button:hover{
-  background-color: var(--ginger-light);
+  opacity: 0.7;
 }
