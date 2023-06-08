@@ -2,6 +2,7 @@
  min-width: 350px;
  height: 169px;
  display: flex;
+ flex-direction: column;
  justify-content: center;
  align-items: center;
  background-color: var(--grey);
@@ -17,7 +18,7 @@
   position: absolute;
   width: 138px;
   height: 138px;
-  top: -25%;
+  top: -30%;
 }
 .card-products .img img{
   width: 100%;
@@ -26,4 +27,16 @@
 }
 .card-products h2{
   color: var(--black);
+}
+.card-products .link-shop{
+  text-decoration: none;
+  color: var(--darkGrey);
+  margin-top: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.card-products .link-shop:hover{
+  color: var(--ginger);
+}
+.card-products .link-shop img{
+  margin-left: 8px;
 }
