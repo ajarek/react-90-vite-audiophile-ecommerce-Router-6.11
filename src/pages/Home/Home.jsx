@@ -1,5 +1,6 @@
 
 import Button from '../../components/Button/Button'
+import CardProducts from '../../components/CardProducts/CardProducts'
 import './Home.css'
 
 const Home = () => {
@@ -16,7 +17,11 @@ const Home = () => {
         </div>
         <div className="hero-right"></div>
       </div>
-    
+       <section className='section'>
+       <CardProducts src={'/images/shared/desktop/image-headphones.png'} nameProduct={'HEADPHONES'}/>
+       <CardProducts src={'/images/shared/desktop/image-speakers.png'} nameProduct={'SPEAKERS'}/>
+       <CardProducts src={'/images/shared/desktop/image-earphones.png'} nameProduct={'EARPHONES'}/>
+       </section>
       
     </div>
   )

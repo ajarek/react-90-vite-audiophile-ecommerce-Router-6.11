@@ -1,6 +1,11 @@
 .home {
   min-height: 100vh;
+  width: 100vw;
   padding: 89px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .home .hero{
   display: grid;
@@ -32,4 +37,13 @@
   line-height: 2;
   margin-bottom: 16px;
   color: var(--darkGrey);
+}
+.home .section{
+  background-color: var(--white);
+  height: 500px;
+  width: 100vw;
+  padding: 89px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center;
 }
