@@ -66,6 +66,29 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className='section-products-2'>
+      <div className='product-speaker-zx7'>
+      <div className='img'>
+            <img
+              src='/images/home/desktop/image-speaker-zx7.jpg'
+              alt='image speaker zx9'
+            />
+          </div>
+            <div className="h2">
+            <h2>
+              ZX9  SPEAKER
+            </h2>
+            </div>
+            <Button
+              label='SEE PRODUCT'
+              background={'transparent'}
+              color={'#000'}
+            />
+         
+      </div>
+          
+      </section>
     </div>
   )
 }
