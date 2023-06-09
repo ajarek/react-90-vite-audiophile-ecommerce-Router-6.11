@@ -10,7 +10,7 @@
 .home .hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: calc(100vh - 89px);
+  height: 100vh;
   background-image: url('/images/home/desktop/image-hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,7 +105,7 @@
 .home .product-speaker-zx9-info p {
   margin-bottom: 16px;
 }
-.home .section-products-2{
+.home .section-products-2 {
   background-color: var(--white);
   height: calc(320px + 89px + 89px);
   width: 100%;
@@ -115,22 +115,20 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  
 }
-.product-speaker-zx7{
+.home .product-speaker-zx7 {
   width: 100%;
 }
 .home .product-speaker-zx7 .img {
   height: 320px;
-  
- 
 }
-.home .product-speaker-zx7 .img img{
+.home .product-speaker-zx7 .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.home .product-speaker-zx7 h2,.home .product-speaker-zx7 button {
+.home .product-speaker-zx7 h2,
+.home .product-speaker-zx7 button {
   position: absolute;
   top: 33%;
   left: 25%;
@@ -139,5 +137,54 @@
 }
 .home .product-speaker-zx7 button {
   top: 56%;
-  border:1px solid var(--black);
+  border: 1px solid var(--black);
+}
+.home .product-earphones-yx1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.product-earphones-yx1 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 89px;
+}
+.product-earphones-yx1 .wrapper .h2 {
+  color: #000;
+}
+.product-earphones-yx1 .wrapper button {
+  border: 1px solid var(--black);
+}
+.home .audio-gear {
+  background-color: var(--white);
+  height: calc(588px + 89px + 89px);
+  width: 100%;
+  padding: 89px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.home .audio-gear .wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.home .audio-gear .wrapper .h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 32px;
+}
+.home .audio-gear .wrapper .h2 h2 {
+  font-size: 40px;
+  color: var(--black);
+}
+.home .audio-gear .wrapper .h2 h2 span {
+  color: var(--ginger);
+}
+.home .audio-gear .wrapper .h2 p {
+  color: var(--darkGrey);
 }

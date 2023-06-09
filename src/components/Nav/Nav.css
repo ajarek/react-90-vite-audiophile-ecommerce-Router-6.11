@@ -50,11 +50,7 @@
   z-index: 2;
 }
 
-@media (min-width: 1440px) {
-  .nav{
-    max-width: 1537px;
-  }
-}
+
 
 @media (min-width: 876px) {
   .hamburger {

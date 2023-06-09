@@ -1,0 +1,13 @@
+.footer{
+  color: var(--white);
+  height: 352px;
+  width: 100%;
+  padding: 89px;
+}
+.footer-nav{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-nav .wrapper{
+  display: flex;
+}
