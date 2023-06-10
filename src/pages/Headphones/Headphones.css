@@ -1,4 +1,56 @@
 .headphones{
- min-height: 100vh;
  padding-top: 89px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.headphones .title {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headphones .title h1{
+font-size: 40px;
+letter-spacing: 2px;
+}
+.headphones-list{
+  background-color: var(--white);
+  width: 100%;
+  padding: 89px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  color: black;
+}
+.headphones-list .card{
+  display: flex;
+}
+.headphones-list .card:nth-child(even){
+  display: flex;
+  flex-direction: row-reverse;
+}
+.headphones-list .card .left-card{
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+.headphones-list .card .right-card{
+  flex-basis: 50%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 89px;
+}
+.headphones-list .card .left-card img{
+  width: 100%;
+  object-fit: cover;
+}
+.headphones-list .new{
+  color: var(--ginger);
+  letter-spacing: 4px;
 }

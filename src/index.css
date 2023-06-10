@@ -23,7 +23,7 @@ body {
   color: var(--white);
  
 }
-#root {
+.App {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
