@@ -44,6 +44,25 @@ const Footer = () => {
           </Link>
         </ul>
       </nav>
+      <div className='footer-container'>
+        <div className='text'>
+          Audiophile is an all in one stop to fulfill your audio needs. We're a
+          small team of music lovers and sound specialists who are devoted to
+          helping you get the most out of personal audio. Come and visit our
+          demo facility - we’re open 7 days a week.
+        </div>
+        <div className="social">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <img src="/images/shared/desktop/icon-facebook.svg" alt="icon facebook" />
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+          <img src="/images/shared/desktop/icon-twitter.svg" alt="icon twitter" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <img src="/images/shared/desktop/icon-instagram.svg" alt="icon instagram" />
+          </a>
+        </div>
+      </div>
     </div>
   )
 }

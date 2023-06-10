@@ -11,3 +11,19 @@
 .footer-nav .wrapper{
   display: flex;
 }
+.footer-container{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  place-items: end;
+  align-items: center;
+}
+.footer-container .text{
+  line-height: 2;
+  color: var(--darkGrey);
+}
+.footer-container .social{
+  margin-right: 32px;
+}
+.footer-container .social img{
+  margin-right: 32px;
+}
