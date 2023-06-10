@@ -1,0 +1,32 @@
+.audio-gear {
+  background-color: var(--white);
+  height: calc(588px + 89px + 89px);
+  width: 100%;
+  padding: 89px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+ .audio-gear .wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+ .audio-gear .wrapper .h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 32px;
+}
+ .audio-gear .wrapper .h2 h2 {
+  font-size: 40px;
+  color: var(--black);
+}
+ .audio-gear .wrapper .h2 h2 span {
+  color: var(--ginger);
+}
+ .audio-gear .wrapper .h2 p {
+  color: var(--darkGrey);
+}

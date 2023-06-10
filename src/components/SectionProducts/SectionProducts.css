@@ -1,0 +1,9 @@
+.section {
+  background-color: var(--white);
+  height: 480px;
+  width: 100%;
+  padding: 89px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}

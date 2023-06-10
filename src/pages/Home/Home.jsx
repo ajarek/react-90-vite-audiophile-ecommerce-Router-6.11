@@ -1,6 +1,7 @@
 import Button from '../../components/Button/Button'
 import Section from '../../components/Section/Section'
-import CardProducts from '../../components/CardProducts/CardProducts'
+import SectionProducts from '../../components/SectionProducts/SectionProducts'
+import SectionAudioGear from '../../components/SectionAudioGear/SectionAudioGear'
 import Footer from '../../components/Footer/Footer'
 import './Home.css'
 
@@ -25,10 +26,12 @@ const Home = () => {
           />
         </div>
         <div className='hero-right'></div>
+
       </div>
-      
+        <SectionProducts/>
        <Section/>
-      
+       <SectionAudioGear/>
+       <Footer/>
 
       
 
