@@ -3,6 +3,7 @@ import data from '../../assets/data/products.json'
 import Button from '../../components/Button/Button'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
 import SectionAudioGear from '../../components/SectionAudioGear/SectionAudioGear'
+import Footer from '../../components/Footer/Footer'
 const Speakers = () => {
   return (
     <div className='speakers'>
@@ -40,6 +41,7 @@ const Speakers = () => {
       </div>
       <SectionProducts/>
       <SectionAudioGear/>
+      <Footer/>
     </div>
   )
 }
