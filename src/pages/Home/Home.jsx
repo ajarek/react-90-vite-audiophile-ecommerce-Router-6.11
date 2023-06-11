@@ -1,3 +1,4 @@
+import {  useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import Section from '../../components/Section/Section'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
@@ -6,6 +7,10 @@ import Footer from '../../components/Footer/Footer'
 import './Home.css'
 
 const Home = () => {
+  const navigate = useNavigate()
+  const handleEdit = (id) => {
+    navigate(`/product-edit/${id}/`)
+  }
   return (
     <div className='home'>
       <div className='hero'>
@@ -23,6 +28,7 @@ const Home = () => {
             label={'SEE PRODUCT'}
             background={'#d87d4a'}
             color={'#fff'}
+            onClick={()=>handleEdit(4)}
           />
         </div>
         <div className='hero-right'></div>

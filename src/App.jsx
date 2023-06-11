@@ -4,6 +4,7 @@ import Home from './pages/Home/Home'
 import Headphones from './pages/Headphones/Headphones'
 import Speakers from './pages/Speakers/Speakers'
 import Earphones from './pages/Earphones/Earphones'
+import ProductEdit from './pages/ProductEdit/ProductEdit'
 import Error from './pages/Error/Error'
 Earphones
 const router = createBrowserRouter([
@@ -31,6 +32,18 @@ const router = createBrowserRouter([
         path: "/earphones",
         element: <Earphones />,
         errorElement: <Error />,
+      },
+      {
+        path: 'product-edit',
+        errorElement: <Error />,
+        children: [
+          {
+            path: ':id',
+            // action: noteAction,
+            element: <ProductEdit />,
+            errorElement: <Error />,
+          },
+        ],
       },
     ],
   },

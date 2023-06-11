@@ -1,0 +1,113 @@
+.product-edit{
+  padding-top: 89px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--white);
+}
+.product-edit .card{
+  display: flex;
+  padding: 89px;
+  color: var(--black);
+}
+
+.product-edit .card .left-card{
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+.product-edit .card .right-card{
+  flex-basis: 50%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 89px;
+  
+}
+.product-edit .name h2{
+  font-size: 40px;
+  
+}
+.product-edit .description{
+  color: var(--darkGrey);
+}
+.product-edit .card .left-card img{
+  width: 100%;
+  object-fit: cover;
+}
+.product-edit .new{
+  color: var(--ginger);
+  letter-spacing: 4px;
+}
+.product-edit .counter{
+  display: flex;
+  align-items: center;
+}
+.product-edit .counter button{
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+.product-edit .counter button:hover{
+  background-color: var(--darkGrey);
+  color: var(--white);
+}
+.product-edit .counter .result{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey);
+}
+.info-product{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding:0 89px 89px 89px;
+  color: var(--darkGrey);
+}
+.info-product h2{
+  font-size: 32px;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.info-product .box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 89px;
+
+}
+.info-product .box .wrapper{
+  display: flex;
+  line-height: 2;
+}
+.info-product .box .wrapper p:nth-child(1){
+ color: var(--ginger);
+ margin-right: 16px;
+}
+.gallery{
+  width: 100%;
+  display: flex;
+  padding:0 89px 89px 89px;
+  gap: 16px;
+}
+.gallery .gallery-left{
+  flex-basis: 40%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gallery .gallery-right{
+  flex-basis: 60%;
+  flex-grow: 1;
+}
+.gallery-right img{
+  height: 100%;
+  object-fit: cover;
+}

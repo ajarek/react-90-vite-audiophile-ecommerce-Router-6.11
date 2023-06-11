@@ -1,8 +1,12 @@
 import './Section.css'
 import CardProducts from '../../components/CardProducts/CardProducts'
-
+import {  useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 const Section = () => {
+  const navigate = useNavigate()
+  const handleEdit = (id) => {
+    navigate(`/product-edit/${id}/`)
+  }
   return (
     <div>
      
@@ -26,6 +30,7 @@ const Section = () => {
               label='SEE PRODUCT'
               background={'#000'}
               color={'#fff'}
+              onClick={()=>handleEdit(2)}
             />
           </div>
         </div>
@@ -45,6 +50,7 @@ const Section = () => {
             label='SEE PRODUCT'
             background={'transparent'}
             color={'#000'}
+            onClick={()=>handleEdit(5)}
           />
         </div>
       </section>
@@ -64,6 +70,7 @@ const Section = () => {
               label='SEE PRODUCT'
               background={'transparent'}
               color={'#000'}
+              onClick={()=>handleEdit(1)}
             />
           </div>
         </div>

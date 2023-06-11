@@ -1,10 +1,15 @@
 import './Headphones.css'
 import data from '../../assets/data/products.json'
+import {  useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
 import SectionAudioGear from '../../components/SectionAudioGear/SectionAudioGear'
 import Footer from '../../components/Footer/Footer'
 const Headphones = () => {
+  const navigate = useNavigate()
+  const handleEdit = (id) => {
+    navigate(`/product-edit/${id}/`)
+  }
   return (
     <div className='headphones'>
       <div className='title'>
@@ -39,6 +44,7 @@ const Headphones = () => {
                       label='SEE PRODUCT'
                       background={'#d87d4a'}
                       color={'#fff'}
+                      onClick={()=>handleEdit(product.id)}
                     />
                   </div>
                 </div>
