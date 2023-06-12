@@ -3,6 +3,7 @@
   height: 352px;
   width: 100%;
   padding: 89px;
+  background-color: var(--black);
 }
 .footer-nav{
   display: flex;

@@ -1,7 +1,11 @@
 import { redirect, useParams, useNavigate} from 'react-router-dom'
 import data from '../../assets/data/products.json'
+import {saveStorage} from '../../helper/localStorage'
 import Button from '../../components/Button/Button'
 import './ProductEdit.css'
+import SectionProducts from '../../components/SectionProducts/SectionProducts'
+import SectionAudioGear from '../../components/SectionAudioGear/SectionAudioGear'
+import Footer from '../../components/Footer/Footer'
 import { useState } from 'react'
 
 const ProductEdit = () => {
@@ -16,6 +20,12 @@ const ProductEdit = () => {
   const [count, setCount] = useState(1)
   let { id } = useParams()
   const product = data.products?.find((el) => el.id === +id)
+  
+  const handleCart= (id, shortName, cartImage, price, count) =>{
+    const newData={id, shortName, cartImage, price, count}
+
+    saveStorage(newData,'items',)
+  }
 
   return (
     <div className='product-edit'>
@@ -46,6 +56,7 @@ const ProductEdit = () => {
             label='ADD TO CART'
             background={'#d87d4a'}
             color={'#fff'}
+            onClick={()=>handleCart(product.id, product.shortName, product.cartImage,product.price,count)}
           />
         </div>
       </div>
@@ -125,6 +136,9 @@ const ProductEdit = () => {
               
           </div>
         </div>
+        <SectionProducts/>
+      <SectionAudioGear/>
+      <Footer/>
     </div>
   )
 }
