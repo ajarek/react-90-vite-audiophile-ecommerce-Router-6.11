@@ -1,0 +1,27 @@
+.cart-wrapper{
+  margin: 100px;
+  width: 377px;
+  min-height: 300px;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 5px;
+  padding: 10px;
+}
+.cart-wrapper .card{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cart-wrapper .card .img{
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+}
+.cart-wrapper .card .img img{
+  width: 100%;
+  object-fit: cover;
+}
+.cart-wrapper .card .info-wrapper{
+ width: 150px;
+}

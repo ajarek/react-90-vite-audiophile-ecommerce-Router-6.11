@@ -1,13 +1,26 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
+import Cart from '../Cart/Cart'
+import FullPageLayout from '../FullPageLayout/FullPageLayout'
 import './Nav.css'
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false)
+  const [cart, setCart] = useState(false)
 
+  const handleCart =()=>{
+    setCart(!cart)
+   
+  }
   return (
+   <>
+    {cart?<FullPageLayout>
+            <Cart/>
+      </FullPageLayout>:null
+      }
     <nav className='nav'>
+      
       <div className="logo">
       <Link
         className='link'
@@ -47,7 +60,7 @@ const Nav = () => {
         
       </ul>
       <div className="cart">
-        <button><img src="/images/shared/desktop/icon-cart.svg" alt="cart"/></button>
+        <button onClick={handleCart}><img src="/images/shared/desktop/icon-cart.svg" alt="cart"/></button>
         </div>
       <div className='hamburger'>
         <Hamburger
@@ -69,6 +82,7 @@ const Nav = () => {
         />
       </div>
     </nav>
+    </>
   )
 }
 
