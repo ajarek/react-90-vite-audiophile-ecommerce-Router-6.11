@@ -116,3 +116,36 @@
   object-fit: cover;
   border-radius: 15px;
 }
+.like{
+  width: 100%;
+ 
+  padding:0 89px 89px 89px;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.like h2{
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+.like .images-wrapper{
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(3 , 1fr);
+  place-items: center;
+  gap: 32px;
+}
+.like .images-wrapper .img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.like .images-wrapper .img img{
+  width: 100%;
+}
+.like .images-wrapper .img h3{
+  font-size: 24px;
+  margin: 32px 0;
+}
