@@ -1,7 +1,7 @@
 .cart-wrapper{
   margin: 100px;
   width: 377px;
-  min-height: 300px;
+  min-height: 140px;
   background-color: var(--white);
   color: var(--black);
   border-radius: 5px;
@@ -13,7 +13,43 @@
   justify-content: flex-start;
   align-items: center;
 }
-.cart-wrapper .card .img{
+.cart-wrapper .full{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-wrapper .full button{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--black);
+  font-size: 15px;
+}
+.cart-wrapper .full button:hover{
+  color: var(--ginger);
+  border-bottom: 1px solid var(--ginger);
+}
+ .empty{
+ 
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+ .empty .img{
+  width:130px;
+  height: 120px;
+   padding: 8px;
+}
+ .empty .img img{
+  width:80%;
+  height: 80%;
+  object-fit: cover;
+ 
+}
+ .card .img{
   width: 64px;
   height: 64px;
   margin-right: 16px;
@@ -24,4 +60,27 @@
 }
 .cart-wrapper .card .info-wrapper{
  width: 150px;
+}
+.cart-wrapper .counter{
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.cart-wrapper .counter button{
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+.cart-wrapper .counter button:hover{
+  background-color: var(--darkGrey);
+  color: var(--white);
+}
+.cart-wrapper .counter .result{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey);
 }

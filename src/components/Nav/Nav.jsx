@@ -11,11 +11,17 @@ const Nav = () => {
 
   const handleCart =()=>{
     setCart(!cart)
-   
+  }
+
+  const handleFullPageLayout =(e)=>{
+
+   if(e.target.className==='full-page-layout'){
+    setCart(false)
+   }
   }
   return (
    <>
-    {cart?<FullPageLayout>
+    {cart?<FullPageLayout onClick={handleFullPageLayout}>
             <Cart/>
       </FullPageLayout>:null
       }
