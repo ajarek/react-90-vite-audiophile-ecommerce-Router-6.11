@@ -1,15 +1,18 @@
 import { redirect, useParams, useNavigate} from 'react-router-dom'
 import data from '../../assets/data/products.json'
-import {saveStorage} from '../../helper/localStorage'
+import {saveStorage, fetchStorage} from '../../helper/localStorage'
 import Button from '../../components/Button/Button'
 import './ProductEdit.css'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
 import SectionAudioGear from '../../components/SectionAudioGear/SectionAudioGear'
 import Footer from '../../components/Footer/Footer'
-import { useState } from 'react'
+import { React, useState, useContext, useEffect } from 'react'
+import { AppContext } from '../../App'
 
 const ProductEdit = () => {
   const navigate = useNavigate()
+  
+  const { length,setLength } = useContext(AppContext)
   const handleOthers = (slug) => {
     const product = data.products?.find((el) =>el.slug==slug)
    console.log(product);
@@ -23,10 +26,10 @@ const ProductEdit = () => {
   
   const handleCart= (id, shortName, cartImage, price, count) =>{
     const newData={id, shortName, cartImage, price, count}
-
     saveStorage(newData,'items',)
+    setLength(fetchStorage('items')?.reduce((acc,item)=>acc+item.count,0))
   }
-
+ 
   return (
     <div className='product-edit'>
       <div className='card'>

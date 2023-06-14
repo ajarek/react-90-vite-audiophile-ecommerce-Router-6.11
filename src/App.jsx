@@ -1,4 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createContext, useState } from 'react'
+export const AppContext = createContext()
 import Main from './layouts/Main/Main'
 import Home from './pages/Home/Home'
 import Headphones from './pages/Headphones/Headphones'
@@ -49,9 +51,12 @@ const router = createBrowserRouter([
   },
 ])
 function App() {
+  const [length,setLength] = useState()
   return (
     <div className='App'>
+      <AppContext.Provider value={{length,setLength}}>
       <RouterProvider router={router} />
+      </AppContext.Provider>
     </div>
   )
 }

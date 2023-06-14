@@ -10,7 +10,7 @@
 .cart-wrapper .card{
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 .cart-wrapper .full{
@@ -52,35 +52,18 @@
  .card .img{
   width: 64px;
   height: 64px;
-  margin-right: 16px;
+  
 }
 .cart-wrapper .card .img img{
   width: 100%;
   object-fit: cover;
 }
 .cart-wrapper .card .info-wrapper{
- width: 150px;
+ 
+
 }
-.cart-wrapper .counter{
+.cart-wrapper .total{
   display: flex;
   align-items: center;
-  color: black;
-}
-.cart-wrapper .counter button{
-  width: 30px;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-}
-.cart-wrapper .counter button:hover{
-  background-color: var(--darkGrey);
-  color: var(--white);
-}
-.cart-wrapper .counter .result{
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--grey);
+  justify-content: space-between;
 }

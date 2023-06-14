@@ -1,46 +1,25 @@
 import {saveStorage,fetchStorage,deleteStorage} from '../../helper/localStorage'
+
 import './Cart.css'
-import { useState,useEffect } from 'react'
+import { React, useState, useContext, useEffect } from 'react'
+import { AppContext } from '../../App'
 const Cart = () => {
+  const { length,setLength } = useContext(AppContext)
+const [items,setItems] = useState(fetchStorage('items'))
 
-  const [count, setCount] = useState([])
 
-  useEffect(() => {
-    // Pobranie danych z localStorage
-    const storedCounters =fetchStorage('items');
-    console.log(Object.values(storedCounters).map(el=>el.count))
-    if (storedCounters) {
-      setCount(Object.values(storedCounters).map(el=>el.count));
-    }
-  }, []);
-  useEffect(() => {
-    // Zapisanie danych do localStorage przy każdej zmianie wartości liczników
-    saveStorage('items')
-  }, [count]);
-
-  const items =fetchStorage('items')
   const handleDelete =()=>{
     deleteStorage('items')
-
-    const incrementCounter = (index) => {
-      setCount((prevCounters) => {
-        const updatedCounters = [...prevCounters];
-        updatedCounters[index] = {
-          ...updatedCounters[index],
-          value: updatedCounters[index].value + 1,
-        };
-        return updatedCounters;
-      });
-    };
-
-
-
+    setItems(null)
+    setLength(undefined)
   }
+
+  
   return (
     <div className='cart-wrapper'>
      { items?
       <div className="full">
-        <h1>CART ({items.length})</h1>
+        <h1>CART ({length})</h1>
         <button onClick={handleDelete}>Remove All</button>
         </div>:
         <div className='empty'>
@@ -50,7 +29,7 @@ const Cart = () => {
           </div>
           </div>
      }
-    {items&&items.map((el,index)=>{
+    {items&&items.map((el)=>{
      
       return(
         <div key={el.id} className="card">
@@ -61,18 +40,16 @@ const Cart = () => {
           <div className="name">{el.shortName}</div>
           <div className="price">$ {(el.price).toFixed(2)}</div>
           </div>
-          <div className='counter'>
-            <button
-              onClick={() => setCount( count[index] - 1)}
-            >
-              -
-            </button>
-            <div className='result'>{count[index]}</div>
-            <button onClick={() => setCount(count[index] + 1)}>+</button>
-          </div>
+          <div className="count">pcs {el.count}</div>
+          <div className="sum">$ {(el.price*el.count).toFixed(2)}</div>
         </div>
       )
     })}
+      <div className="total">
+        {items?<div className="text">TOTAL</div>:null}
+        <h2>{items?'$'+(items.reduce((acc,item)=>acc+item.price*item.count,0)).toFixed(2):null}</h2>
+         
+         </div>
       </div>
   )
 }

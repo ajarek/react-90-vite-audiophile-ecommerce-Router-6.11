@@ -1,24 +1,32 @@
-import { useState } from 'react'
+
 import { Link } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
+import {saveStorage,fetchStorage,deleteStorage} from '../../helper/localStorage'
+
 import Cart from '../Cart/Cart'
 import FullPageLayout from '../FullPageLayout/FullPageLayout'
 import './Nav.css'
+import { React, useState, useContext, useEffect } from 'react'
+import { AppContext } from '../../App'
+
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false)
   const [cart, setCart] = useState(false)
-
+  const [items,setItems] = useState(fetchStorage('items'))
+  const { length,setLength } = useContext(AppContext)
   const handleCart =()=>{
     setCart(!cart)
   }
 
   const handleFullPageLayout =(e)=>{
-
    if(e.target.className==='full-page-layout'){
     setCart(false)
    }
   }
+ 
+ 
+
   return (
    <>
     {cart?<FullPageLayout onClick={handleFullPageLayout}>
@@ -67,6 +75,7 @@ const Nav = () => {
       </ul>
       <div className="cart">
         <button onClick={handleCart}><img src="/images/shared/desktop/icon-cart.svg" alt="cart"/></button>
+        {length?<div className="circle">{length}</div>:null}
         </div>
       <div className='hamburger'>
         <Hamburger
