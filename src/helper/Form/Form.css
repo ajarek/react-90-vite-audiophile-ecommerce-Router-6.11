@@ -4,34 +4,35 @@ form {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 8px;
 }
+form label{
+  color: var(--ginger);
+}
 form input {
-  width: 100%;
+  width: 300px;
   height: 40px;
   padding: 1rem;
   font-size: 1.2rem;
   outline: none;
   border: none;
   border-radius: 5px;
-  background-color: var(--grey);
   user-select: none;
   color: var(--black);
 }
-input[type='text']:focus {
-  background-color: var(--blue);
-  color: var(--white);
+form input::placeholder{
+  color: var(--darkGrey);
 }
 form input[type='submit'] {
   color: var(--white);
-  width: 100%;
+  width: 300px;
   padding: 8px 16px;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  background-color: var(--blue);
+  background-color: var(--ginger);
 }
 form input[type='submit']:hover {
   background-color: var(--green);
@@ -39,8 +40,10 @@ form input[type='submit']:hover {
 }
 .wrapper-input {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 form p {
   color: var(--red);
-  position: absolute;
+  
 }

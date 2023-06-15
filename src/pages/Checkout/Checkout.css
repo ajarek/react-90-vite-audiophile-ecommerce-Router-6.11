@@ -5,4 +5,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--grey);
+  color: var(--black);
+}
+.checkout-wrapper{
+  width: 100%;
+  padding: 89px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
 }
