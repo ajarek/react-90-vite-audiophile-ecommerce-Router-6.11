@@ -31,6 +31,7 @@ const ProductEdit = () => {
     saveStorage(newData,'items',)
     setLength(fetchStorage('items')?.reduce((acc,item)=>acc+item.count,0));
     setModal(true)
+    setTimeout(()=>setModal(false),4000)
   }
   const handleModal=()=>{
     setModal(false)

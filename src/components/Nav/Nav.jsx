@@ -12,9 +12,8 @@ import { AppContext } from '../../App'
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false)
-  const [cart, setCart] = useState(false)
   const [items,setItems] = useState(fetchStorage('items'))
-  const { length,setLength } = useContext(AppContext)
+  const { length,setLength,cart, setCart } = useContext(AppContext)
   const handleCart =()=>{
     setCart(!cart)
   }

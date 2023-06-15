@@ -7,6 +7,7 @@ import Headphones from './pages/Headphones/Headphones'
 import Speakers from './pages/Speakers/Speakers'
 import Earphones from './pages/Earphones/Earphones'
 import ProductEdit from './pages/ProductEdit/ProductEdit'
+import Checkout from './pages/Checkout/Checkout'
 import Error from './pages/Error/Error'
 Earphones
 const router = createBrowserRouter([
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
         errorElement: <Error />,
       },
       {
+        path: "/checkout",
+        element: <Checkout />,
+        errorElement: <Error />,
+      },
+      {
         path: 'product-edit',
         errorElement: <Error />,
         children: [
@@ -52,9 +58,10 @@ const router = createBrowserRouter([
 ])
 function App() {
   const [length,setLength] = useState()
+  const [cart, setCart] = useState(false)
   return (
     <div className='App'>
-      <AppContext.Provider value={{length,setLength}}>
+      <AppContext.Provider value={{length,setLength,cart, setCart}}>
       <RouterProvider router={router} />
       </AppContext.Provider>
     </div>
