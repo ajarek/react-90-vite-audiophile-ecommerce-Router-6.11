@@ -1,0 +1,27 @@
+.modal{
+  position: fixed;
+  left: 99px;
+  top: 99px;
+  width: 500px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: var(--green);
+  z-index: 100;
+  border-radius: 5px;
+  user-select: none;
+}
+.modal .check{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.modal span{
+  cursor: pointer;
+}

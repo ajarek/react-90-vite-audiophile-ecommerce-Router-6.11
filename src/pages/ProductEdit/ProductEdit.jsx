@@ -6,32 +6,38 @@ import './ProductEdit.css'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
 import SectionAudioGear from '../../components/SectionAudioGear/SectionAudioGear'
 import Footer from '../../components/Footer/Footer'
+import Modal from '../../components/Modal/Modal'
 import { React, useState, useContext, useEffect } from 'react'
 import { AppContext } from '../../App'
 
 const ProductEdit = () => {
   const navigate = useNavigate()
-  
+  const [modal,setModal]=useState(false)
   const { length,setLength } = useContext(AppContext)
+  const [count, setCount] = useState(1)
+  let { id } = useParams()
+  const product = data.products?.find((el) => el.id === +id)
+
   const handleOthers = (slug) => {
     const product = data.products?.find((el) =>el.slug==slug)
-   console.log(product);
     const id=product.id
     window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate(`/product-edit/${id}/`)
   }
-  const [count, setCount] = useState(1)
-  let { id } = useParams()
-  const product = data.products?.find((el) => el.id === +id)
   
   const handleCart= (id, shortName, cartImage, price, count) =>{
+    
     const newData={id, shortName, cartImage, price, count}
     saveStorage(newData,'items',)
-    setLength(fetchStorage('items')?.reduce((acc,item)=>acc+item.count,0))
+    setLength(fetchStorage('items')?.reduce((acc,item)=>acc+item.count,0));
+    setModal(true)
   }
- 
+  const handleModal=()=>{
+    setModal(false)
+  }
   return (
     <div className='product-edit'>
+      {modal?<Modal onClick={handleModal} itemName={product.name}/>:null}
       <div className='card'>
         <div className='left-card'>
           <img
