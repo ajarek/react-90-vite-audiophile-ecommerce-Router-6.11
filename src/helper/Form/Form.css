@@ -22,7 +22,7 @@ form input {
   color: var(--black);
 }
 form input::placeholder{
-  color: var(--darkGrey);
+  color: var(--grey);
 }
 form input[type='submit'] {
   color: var(--white);
@@ -33,6 +33,7 @@ form input[type='submit'] {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   background-color: var(--ginger);
+  margin-top: 22px;
 }
 form input[type='submit']:hover {
   background-color: var(--green);

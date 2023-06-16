@@ -129,7 +129,7 @@ export const Form = ({ onSubmit }) => {
       <div className='wrapper-input'>
         <input
           type='submit'
-          value='SUBMIT'
+          value='CONTINUE & PAY'
         />
       </div>
     </form>
