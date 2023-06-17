@@ -1,5 +1,5 @@
 .card-products{
- min-width: 350px;
+ width: 300px;
  height: 169px;
  display: flex;
  flex-direction: column;

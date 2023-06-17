@@ -30,3 +30,35 @@
  .audio-gear .wrapper .h2 p {
   color: var(--darkGrey);
 }
+@media (max-width:950px) {
+  .audio-gear .wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+   
+  }
+  .audio-gear {
+  padding: 0;
+  width: 100vw;
+   
+  }
+  .audio-gear .wrapper .h2  {
+    align-items: center;
+    width: 90vw;
+    padding: 0;
+  }
+  .audio-gear .wrapper .h2 h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .audio-gear .wrapper .img{
+    width: 90vw;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .audio-gear .wrapper .img img{
+    height: 100%;
+  }
+}

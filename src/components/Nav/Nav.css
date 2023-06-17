@@ -11,6 +11,7 @@
   z-index: 5;
   border-bottom: 1px solid var(--darkGrey);
 }
+
 .logo .link {
   padding: 0;
   display: flex;
@@ -109,4 +110,11 @@
   .nav {
     padding: 0 0rem;
   }
+  .hamburger {
+  position: absolute;
+  left: 160px;
+  top: 48%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
 }

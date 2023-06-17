@@ -1,9 +1,16 @@
 .section {
   background-color: var(--white);
-  height: 480px;
+  min-height: 480px;
   width: 100%;
   padding: 89px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   place-items: center;
+  gap: 16px;
+}
+@media (max-width:850px) {
+  .section {
+    padding:89px 8px;
+    gap: 50px;
+  }
 }

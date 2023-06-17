@@ -31,7 +31,7 @@ const Home = () => {
             onClick={()=>handleEdit(4)}
           />
         </div>
-        <div className='hero-right'></div>
+       
 
       </div>
         <SectionProducts/>

@@ -102,4 +102,55 @@
 .product-earphones-yx1 .wrapper button {
   border: 1px solid var(--black);
 }
- 
+ @media (max-width:950px) {
+  .product-speaker-zx9{
+     width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding:0 89px;
+  }
+  .product-speaker-zx9-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .product-speaker-zx7{
+    width: 90vw;
+  }
+  .product-speaker-zx7 h2,
+ .product-speaker-zx7 button {
+  position: absolute;
+  top: 30%;
+  left: 42%;
+  transform: translateX(-50%);
+  color: var(--black);
+  
+}
+ .product-speaker-zx7 button {
+  top: 40%;
+  border: 1px solid var(--black);
+}
+
+.product-earphones-yx1 {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  margin-top: 89px;
+}
+.product-earphones-yx1 .wrapper {
+  background-color: var(--grey);
+  width: 90vw;
+  justify-content: flex-start;
+  align-items: center;
+  height: 300px;
+  padding-top: 32px;
+}
+.product-earphones-yx1 .img{
+width: 90vw;
+} 
+.product-earphones-yx1 .img img{
+width: 100%;
+} 
+}
