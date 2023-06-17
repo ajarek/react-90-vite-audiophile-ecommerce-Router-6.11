@@ -10,6 +10,7 @@
 .card-finish {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 .card-finish .card{
 display: flex;
@@ -23,4 +24,16 @@ margin-top: 16px;
 }
 .card-finish .card .img img{
   width: 100%;
+}
+.link-back{
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: var(--ginger);
+  color: var(--white);
+  transition: background-color 0.2s ease-in-out;
+}
+.link-back:hover{
+  opacity: 0.7;
 }

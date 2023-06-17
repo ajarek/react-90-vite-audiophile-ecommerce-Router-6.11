@@ -7,11 +7,13 @@ import { Form } from '../../helper/Form/Form'
 import './Checkout.css'
 
 const Checkout = () => {
+  
   const [items, setItems] = useState(fetchStorage('items'))
   const [finish, setFinish]=useState(false)
   const handleForm = (data) => {
     console.log(data)
     setFinish(true)
+    
   }
   return (
     <>
