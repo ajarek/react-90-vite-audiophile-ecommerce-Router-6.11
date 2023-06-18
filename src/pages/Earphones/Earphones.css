@@ -1,56 +1,65 @@
-.earphones{
+.earphones {
   padding-top: 89px;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
- }
- .earphones .title {
-   width: 100%;
-   height: 250px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
- .earphones .title h1{
- font-size: 40px;
- letter-spacing: 2px;
- }
- .earphones-list{
-   background-color: var(--white);
-   width: 100%;
-   padding: 89px;
-   display: grid;
-   grid-template-columns: repeat(1, 1fr);
-   place-items: center;
-   color: black;
- }
- .earphones-list .card{
-   display: flex;
- }
- .earphones-list .card:nth-child(even){
-   display: flex;
-   flex-direction: row-reverse;
- }
- .earphones-list .card .left-card{
-   flex-basis: 50%;
-   flex-grow: 1;
- }
- .earphones-list .card .right-card{
-   flex-basis: 50%;
-   flex-grow: 1;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: space-evenly;
-   padding: 89px;
- }
- .earphones-list .card .left-card img{
-   width: 100%;
-   object-fit: cover;
- }
- .earphones-list .new{
-   color: var(--ginger);
-   letter-spacing: 4px;
- }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.earphones .title {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.earphones .title h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.earphones-list {
+  background-color: var(--white);
+  width: 100%;
+  padding: 89px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  color: black;
+}
+
+.earphones-list .card {
+  display: flex;
+}
+
+.earphones-list .card:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.earphones-list .card .left-card {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.earphones-list .card .right-card {
+  flex-basis: 50%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 89px;
+}
+
+.earphones-list .card .left-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.earphones-list .new {
+  color: var(--ginger);
+  letter-spacing: 4px;
+}

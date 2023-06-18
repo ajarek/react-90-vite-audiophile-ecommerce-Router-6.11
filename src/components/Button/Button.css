@@ -1,4 +1,4 @@
-.button{
+.button {
   width: 164px;
   height: 44px;
   border: none;
@@ -7,6 +7,6 @@
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
 }
-.button:hover{
+.button:hover {
   opacity: 0.7;
 }

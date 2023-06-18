@@ -8,9 +8,10 @@
   place-items: center;
   gap: 16px;
 }
-@media (max-width:850px) {
+
+@media (max-width: 850px) {
   .section {
-    padding:89px 8px;
+    padding: 89px 8px;
     gap: 50px;
   }
 }

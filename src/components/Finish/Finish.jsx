@@ -1,18 +1,14 @@
-import {
-  saveStorage,
-  fetchStorage,
-  deleteStorage,
-} from '../../helper/localStorage'
+import { fetchStorage, deleteStorage } from '../../helper/localStorage'
 import { AppContext } from '../../App'
-import { React, useState, useContext, useEffect } from 'react'
+import { React, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './Finish.css'
 
 const Finish = () => {
   const [items, setItems] = useState(fetchStorage('items'))
-  const { length,setLength,cart, setCart } = useContext(AppContext)
+  const { setLength } = useContext(AppContext)
 
-  const handleBack=()=>{
+  const handleBack = () => {
     deleteStorage('items')
     setItems(null)
     setLength(undefined)
@@ -49,8 +45,12 @@ const Finish = () => {
             )
           })}
       </div>
-      <Link className='link-back' to={'/'} onClick={handleBack} >
-         BACK TO HOME
+      <Link
+        className='link-back'
+        to={'/'}
+        onClick={handleBack}
+      >
+        BACK TO HOME
       </Link>
     </div>
   )

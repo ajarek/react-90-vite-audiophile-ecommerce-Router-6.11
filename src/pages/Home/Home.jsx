@@ -1,4 +1,4 @@
-import {  useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import Section from '../../components/Section/Section'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
@@ -28,21 +28,14 @@ const Home = () => {
             label={'SEE PRODUCT'}
             background={'#d87d4a'}
             color={'#fff'}
-            onClick={()=>handleEdit(4)}
+            onClick={() => handleEdit(4)}
           />
         </div>
-       
-
       </div>
-        <SectionProducts/>
-       <Section/>
-       <SectionAudioGear/>
-       <Footer/>
-
-      
-
-     
-     
+      <SectionProducts />
+      <Section />
+      <SectionAudioGear />
+      <Footer />
     </div>
   )
 }

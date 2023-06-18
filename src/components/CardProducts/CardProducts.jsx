@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './CardProducts.css'
 
-const CardProducts = ({ src, nameProduct,path }) => {
+const CardProducts = ({ src, nameProduct, path }) => {
   return (
     <div className='card-products'>
       <div className='img'>
@@ -11,7 +11,16 @@ const CardProducts = ({ src, nameProduct,path }) => {
         />
       </div>
       <h2>{nameProduct}</h2>
-      <Link className='link-shop' to={path}>SHOP <img src="/images/shared/desktop/icon-arrow-right.svg" alt="icon arrow right" /></Link>
+      <Link
+        className='link-shop'
+        to={path}
+      >
+        SHOP{' '}
+        <img
+          src='/images/shared/desktop/icon-arrow-right.svg'
+          alt='icon arrow right'
+        />
+      </Link>
     </div>
   )
 }

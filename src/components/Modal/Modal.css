@@ -1,4 +1,4 @@
-.modal{
+.modal {
   position: fixed;
   left: 99px;
   top: 99px;
@@ -13,7 +13,8 @@
   border-radius: 5px;
   user-select: none;
 }
-.modal .check{
+
+.modal .check {
   width: 25px;
   height: 25px;
   display: flex;
@@ -22,11 +23,13 @@
   border-radius: 50%;
   background-color: var(--white);
 }
-.modal span{
+
+.modal span {
   cursor: pointer;
 }
-@media (max-width:630px) {
-  .modal{
+
+@media (max-width: 630px) {
+  .modal {
     left: 50%;
     transform: translateX(-50%);
     width: 320px;

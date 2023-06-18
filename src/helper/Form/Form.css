@@ -7,9 +7,11 @@ form {
   justify-content: space-between;
   gap: 8px;
 }
-form label{
+
+form label {
   color: var(--ginger);
 }
+
 form input {
   width: 300px;
   height: 40px;
@@ -21,9 +23,11 @@ form input {
   user-select: none;
   color: var(--black);
 }
-form input::placeholder{
+
+form input::placeholder {
   color: var(--grey);
 }
+
 form input[type='submit'] {
   color: var(--white);
   width: 300px;
@@ -35,28 +39,31 @@ form input[type='submit'] {
   background-color: var(--ginger);
   margin-top: 22px;
 }
+
 form input[type='submit']:hover {
   background-color: var(--green);
   color: var(--white);
 }
+
 .wrapper-input {
   position: relative;
   display: flex;
   flex-direction: column;
 }
+
 form p {
   color: var(--red);
-  
 }
-@media (max-width:720px) {
-  form{
+
+@media (max-width: 720px) {
+  form {
     width: 100%;
     align-items: center;
     justify-content: center;
   }
-  form input,form input[type='submit'] {
 
+  form input,
+  form input[type='submit'] {
     width: 80vw;
   }
-  
 }

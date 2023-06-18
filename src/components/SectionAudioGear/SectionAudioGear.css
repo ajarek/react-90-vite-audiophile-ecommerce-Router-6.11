@@ -9,56 +9,67 @@
   justify-content: center;
   position: relative;
 }
- .audio-gear .wrapper {
+
+.audio-gear .wrapper {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
- .audio-gear .wrapper .h2 {
+
+.audio-gear .wrapper .h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 32px;
 }
- .audio-gear .wrapper .h2 h2 {
+
+.audio-gear .wrapper .h2 h2 {
   font-size: 40px;
   color: var(--black);
 }
- .audio-gear .wrapper .h2 h2 span {
+
+.audio-gear .wrapper .h2 h2 span {
   color: var(--ginger);
 }
- .audio-gear .wrapper .h2 p {
+
+.audio-gear .wrapper .h2 p {
   color: var(--darkGrey);
 }
+
 @media (max-width:950px) {
   .audio-gear .wrapper {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-   
+
   }
+
   .audio-gear {
-  padding: 0;
-  width: 100vw;
-   
+    padding: 0;
+    width: 100vw;
+
   }
-  .audio-gear .wrapper .h2  {
+
+  .audio-gear .wrapper .h2 {
     align-items: center;
     width: 90vw;
     padding: 0;
   }
+
   .audio-gear .wrapper .h2 h2 {
     font-size: 20px;
     text-align: center;
   }
-  .audio-gear .wrapper .img{
+
+  .audio-gear .wrapper .img {
     width: 90vw;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .audio-gear .wrapper .img img{
+
+  .audio-gear .wrapper .img img {
     height: 100%;
   }
 }

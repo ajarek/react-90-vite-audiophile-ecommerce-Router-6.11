@@ -1,6 +1,6 @@
 import './Headphones.css'
 import data from '../../assets/data/products.json'
-import {  useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
 import SectionAudioGear from '../../components/SectionAudioGear/SectionAudioGear'
@@ -44,7 +44,7 @@ const Headphones = () => {
                       label='SEE PRODUCT'
                       background={'#d87d4a'}
                       color={'#fff'}
-                      onClick={()=>handleEdit(product.id)}
+                      onClick={() => handleEdit(product.id)}
                     />
                   </div>
                 </div>

@@ -22,22 +22,22 @@ const router = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: "/headphones",
+        path: '/headphones',
         element: <Headphones />,
         errorElement: <Error />,
       },
       {
-        path: "/speakers",
+        path: '/speakers',
         element: <Speakers />,
         errorElement: <Error />,
       },
       {
-        path: "/earphones",
+        path: '/earphones',
         element: <Earphones />,
         errorElement: <Error />,
       },
       {
-        path: "/checkout",
+        path: '/checkout',
         element: <Checkout />,
         errorElement: <Error />,
       },
@@ -57,12 +57,12 @@ const router = createBrowserRouter([
   },
 ])
 function App() {
-  const [length,setLength] = useState()
+  const [length, setLength] = useState()
   const [cart, setCart] = useState(false)
   return (
     <div className='App'>
-      <AppContext.Provider value={{length,setLength,cart, setCart}}>
-      <RouterProvider router={router} />
+      <AppContext.Provider value={{ length, setLength, cart, setCart }}>
+        <RouterProvider router={router} />
       </AppContext.Provider>
     </div>
   )

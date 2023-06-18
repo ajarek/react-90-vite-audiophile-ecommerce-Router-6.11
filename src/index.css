@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
 * {
   margin: 0;
   padding: 0;
@@ -14,20 +15,22 @@
   --blue: #0062b2;
   --orange: #efcbb7;
   --green: #05d69e;
-  --ginger:#d87d4a; 
+  --ginger: #d87d4a;
   --ginger-light: #e8a47c;
 }
+
 body {
   font-family: 'Manrope', sans-serif;
   background-color: var(--black);
   color: var(--white);
- 
+
 }
+
 .App {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  
+
+
 }

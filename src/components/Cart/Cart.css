@@ -1,4 +1,4 @@
-.cart-wrapper{
+.cart-wrapper {
   margin: 100px;
   width: 377px;
   min-height: 140px;
@@ -7,72 +7,66 @@
   border-radius: 5px;
   padding: 10px;
 }
-.cart-wrapper .card{
+.cart-wrapper .card {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.cart-wrapper .full{
+.cart-wrapper .full {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.cart-wrapper .full button{
+.cart-wrapper .full button {
   cursor: pointer;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--black);
   font-size: 15px;
 }
-.cart-wrapper .full button:hover{
+.cart-wrapper .full button:hover {
   color: var(--ginger);
   border-bottom: 1px solid var(--ginger);
 }
- .empty{
- 
+.empty {
   height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
- .empty .img{
-  width:130px;
+.empty .img {
+  width: 130px;
   height: 120px;
-   padding: 8px;
+  padding: 8px;
 }
- .empty .img img{
-  width:80%;
+.empty .img img {
+  width: 80%;
   height: 80%;
   object-fit: cover;
- 
 }
- .card .img{
+.card .img {
   width: 64px;
   height: 64px;
-  
 }
-.cart-wrapper .card .img img{
+.cart-wrapper .card .img img {
   width: 100%;
   object-fit: cover;
 }
-.cart-wrapper .card .info-wrapper{
- 
 
-}
-.cart-wrapper .total{
+.cart-wrapper .total {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 500px) {
-  .cart-wrapper{
+  .cart-wrapper {
     margin: 0;
     width: 100%;
   }
-  .full h1,.text{
+  .full h1,
+  .text {
     font-size: 20px;
   }
 }

@@ -1,6 +1,6 @@
-import { redirect, useParams, useNavigate} from 'react-router-dom'
+import { redirect, useParams, useNavigate } from 'react-router-dom'
 import data from '../../assets/data/products.json'
-import {saveStorage, fetchStorage} from '../../helper/localStorage'
+import { saveStorage, fetchStorage } from '../../helper/localStorage'
 import Button from '../../components/Button/Button'
 import './ProductEdit.css'
 import SectionProducts from '../../components/SectionProducts/SectionProducts'
@@ -12,33 +12,37 @@ import { AppContext } from '../../App'
 
 const ProductEdit = () => {
   const navigate = useNavigate()
-  const [modal,setModal]=useState(false)
-  const { length,setLength } = useContext(AppContext)
+  const [modal, setModal] = useState(false)
+  const { length, setLength } = useContext(AppContext)
   const [count, setCount] = useState(1)
   let { id } = useParams()
   const product = data.products?.find((el) => el.id === +id)
 
   const handleOthers = (slug) => {
-    const product = data.products?.find((el) =>el.slug==slug)
-    const id=product.id
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const product = data.products?.find((el) => el.slug == slug)
+    const id = product.id
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     navigate(`/product-edit/${id}/`)
   }
-  
-  const handleCart= (id, shortName, cartImage, price, count) =>{
-    
-    const newData={id, shortName, cartImage, price, count}
-    saveStorage(newData,'items',)
-    setLength(fetchStorage('items')?.reduce((acc,item)=>acc+item.count,0));
+
+  const handleCart = (id, shortName, cartImage, price, count) => {
+    const newData = { id, shortName, cartImage, price, count }
+    saveStorage(newData, 'items')
+    setLength(fetchStorage('items')?.reduce((acc, item) => acc + item.count, 0))
     setModal(true)
-    setTimeout(()=>setModal(false),4000)
+    setTimeout(() => setModal(false), 4000)
   }
-  const handleModal=()=>{
+  const handleModal = () => {
     setModal(false)
   }
   return (
     <div className='product-edit'>
-      {modal?<Modal onClick={handleModal} itemName={product.name}/>:null}
+      {modal ? (
+        <Modal
+          onClick={handleModal}
+          itemName={product.name}
+        />
+      ) : null}
       <div className='card'>
         <div className='left-card'>
           <img
@@ -66,7 +70,15 @@ const ProductEdit = () => {
             label='ADD TO CART'
             background={'#d87d4a'}
             color={'#fff'}
-            onClick={()=>handleCart(product.id, product.shortName, product.cartImage,product.price,count)}
+            onClick={() =>
+              handleCart(
+                product.id,
+                product.shortName,
+                product.cartImage,
+                product.price,
+                count
+              )
+            }
           />
         </div>
       </div>
@@ -107,48 +119,54 @@ const ProductEdit = () => {
             alt=''
           />
         </div>
-        
       </div>
-      <div className="like">
-          <h2>YOU MAY ALSO LIKE</h2>
-          <div className="images-wrapper">
-            <div className="img">
-            <img src={product.others[0].image.desktop} alt='image others' />
+      <div className='like'>
+        <h2>YOU MAY ALSO LIKE</h2>
+        <div className='images-wrapper'>
+          <div className='img'>
+            <img
+              src={product.others[0].image.desktop}
+              alt='image others'
+            />
             <h3>{product.others[0].name}</h3>
-             <Button
-            label='SEE PRODUCT'
-            background={'#d87d4a'}
-            color={'#fff'}
-            onClick={()=>handleOthers(product.others[0].slug)}
-          />
-            </div>
-            <div className="img">
-            <img src={product.others[1].image.desktop} alt='image others' />
+            <Button
+              label='SEE PRODUCT'
+              background={'#d87d4a'}
+              color={'#fff'}
+              onClick={() => handleOthers(product.others[0].slug)}
+            />
+          </div>
+          <div className='img'>
+            <img
+              src={product.others[1].image.desktop}
+              alt='image others'
+            />
             <h3>{product.others[1].name}</h3>
-             <Button
-            label='SEE PRODUCT'
-            background={'#d87d4a'}
-            color={'#fff'}
-            onClick={()=>handleOthers(product.others[1].slug)}
-          />
-            </div>
-            <div className="img">
-            <img src={product.others[2].image.desktop} alt='image others' />
+            <Button
+              label='SEE PRODUCT'
+              background={'#d87d4a'}
+              color={'#fff'}
+              onClick={() => handleOthers(product.others[1].slug)}
+            />
+          </div>
+          <div className='img'>
+            <img
+              src={product.others[2].image.desktop}
+              alt='image others'
+            />
             <h3>{product.others[2].name}</h3>
-             <Button
-            label='SEE PRODUCT'
-            background={'#d87d4a'}
-            color={'#fff'}
-            onClick={()=>handleOthers(product.others[2].slug)}
-          />
-            </div>
-             
-              
+            <Button
+              label='SEE PRODUCT'
+              background={'#d87d4a'}
+              color={'#fff'}
+              onClick={() => handleOthers(product.others[2].slug)}
+            />
           </div>
         </div>
-        <SectionProducts/>
-      <SectionAudioGear/>
-      <Footer/>
+      </div>
+      <SectionProducts />
+      <SectionAudioGear />
+      <Footer />
     </div>
   )
 }
