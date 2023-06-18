@@ -25,3 +25,11 @@
 .modal span{
   cursor: pointer;
 }
+@media (max-width:630px) {
+  .modal{
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 70px;
+  }
+}

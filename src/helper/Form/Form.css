@@ -48,3 +48,15 @@ form p {
   color: var(--red);
   
 }
+@media (max-width:720px) {
+  form{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  form input,form input[type='submit'] {
+
+    width: 80vw;
+  }
+  
+}

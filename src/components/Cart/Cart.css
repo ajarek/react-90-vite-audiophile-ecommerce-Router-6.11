@@ -67,3 +67,12 @@
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .cart-wrapper{
+    margin: 0;
+    width: 100%;
+  }
+  .full h1,.text{
+    font-size: 20px;
+  }
+}
